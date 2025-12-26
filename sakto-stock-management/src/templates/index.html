@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Warehouse Inventory System</title>
+    <style>
+        body { font-family: Arial; margin: 40px; }
+        label { display: block; margin-top: 10px; }
+        button { margin-top: 20px; padding: 8px 15px; }
+        .result { margin-top: 30px; padding: 15px; border: 1px solid #ccc; }
+    </style>
+</head>
+<body>
+
+<h2>AI-Based Inventory Trend Prediction</h2>
+
+<form method="post">
+    <label>Product ID:</label>
+    <select name="product_id">
+        {% for i in range(1, 21) %}
+        <option value="P{{ '%04d' % i }}">P{{ '%04d' % i }}</option>
+        {% endfor %}
+    </select>
+
+    <label>Time Period:</label>
+    <select name="period">
+        <option value="week">Next Week</option>
+        <option value="month">Next Month</option>
+    </select>
+
+    <label>Season:</label>
+    <select name="season">
+        <option>Spring</option>
+        <option>Summer</option>
+        <option>Autumn</option>
+        <option>Winter</option>
+    </select>
+
+    <label>Price:</label>
+    <input type="number" name="price" step="0.01" required>
+
+    <label>Discount (%):</label>
+    <input type="number" name="discount" step="1" value="0">
+
+    <button type="submit">Predict Trend</button>
+</form>
+
+{% if result %}
+<div class="result">
+    <h3>Prediction Result</h3>
+    <p><strong>Product:</strong> {{ result.product }}</p>
+    <p><strong>Predicted Trend:</strong> {{ result.trend }}</p>
+    <p><strong>Recommended Stock Order:</strong> {{ result.quantity }} units</p>
+</div>
+{% endif %}
+
+</body>
+</html>
