@@ -134,7 +134,7 @@ jupyter notebook notebooks/sakto_stock_management.ipynb
 
 ## 👨‍💻 Author
 
-**Nigel Agojo**  
+**Nigel Agojo, Lance Vincent Gallardo, Ross Cedric Nazareno**  
 Computer Science Student  
 Laguna State Polytechnic University  
 
