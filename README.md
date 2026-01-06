@@ -104,28 +104,28 @@ sakto-stock-management/
 
 ## ▶️ How to Run
 
-# 1. Clone Repository
+### 1. Clone Repository
 ```bash
 git clone https://github.com/your-username/sakto-stock-management.git
 cd sakto-stock-management
 ```
 
-# 2. Install Dependencies
+### 2. Install Dependencies
 ```bash
 pip install -r requirements.txt
 ```
 
-# 3. Run the Notebook
+### 3. Run the Notebook
 ```bash
 jupyter notebook notebooks/sakto_stock_management.ipynb
 ```
 
-# 4. Train the Model
+### 4. Train the Model
 ```bash
 python src/train_model.py
 ```
 
-# 5. Run the app
+### 5. Run the app
 ```bash
 python src/app.py
 ```
